@@ -28,8 +28,10 @@ const getUser = (userId) => {
     return users.find((user) => user.userId === userId)
 }
 
-io.on("connection", (socket) => {
+io.on("connection", (socket, error) => {
     console.log("a user connected") 
+    console.log("@socket:", socket) 
+    console.log("@error:", error) 
     io.emit("welcome", "hello welcome to social buddy char application")
     
     // on connect
