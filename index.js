@@ -4,7 +4,8 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 // const socket =  require('socket.io')
-const io = new Server(7000, {
+const port = process.env.PORT || 7000
+const io = new Server(port, {
     cors: process.env.CLIENT_URL,
 });
 
