@@ -7,6 +7,7 @@ dotenv.config();
 const port = process.env.PORT || 7000
 const io = new Server(port, {
     cors: process.env.CLIENT_URL,
+    allowEIO3: true
 });
 
 console.log("Socket started on port:", port)
