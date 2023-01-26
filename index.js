@@ -6,7 +6,8 @@ dotenv.config();
 // const socket =  require('socket.io')
 const port = process.env.PORT || 7000
 const io = new Server(port, {
-    cors: process.env.CLIENT_URL,
+    cors: "https://amar-social-buddy.netlify.app",
+    // cors: process.env.CLIENT_URL,
     allowEIO3: true
 });
 
