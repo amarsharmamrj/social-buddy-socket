@@ -9,6 +9,8 @@ const io = new Server(port, {
     cors: process.env.CLIENT_URL,
 });
 
+console.log("Socket started on port:", port)
+
 let users = []
 
 const addUser = (userId, socketId) => {
